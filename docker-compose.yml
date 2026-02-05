@@ -1,0 +1,6 @@
+services:
+  occupant.api:
+    image: ${DOCKER_REGISTRY-}occupantapi
+    build:
+      context: .
+      dockerfile: src/Services/Occupant/Occupant.Api/Dockerfile
