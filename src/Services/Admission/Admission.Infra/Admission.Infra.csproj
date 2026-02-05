@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Shared\BookMyDesk.BuildingBlocks\BookMyDesk.BuildingBlocks.csproj" />
+    <ProjectReference Include="..\Admission.App\Admission.App.csproj" />
+    <ProjectReference Include="..\Admission.Core\Admission.Core.csproj" />
+  </ItemGroup>
+
+</Project>
