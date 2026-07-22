@@ -2,6 +2,7 @@
 using System.Reflection;
 using Admission.App.Queries;
 using Admission.Infra.Dependencies;
+using BookMyDesk.BuildingBlocks.MultiTenancy.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,15 +17,19 @@ builder.Services.AddSwaggerGen();
 
 //Register Mediatr
 var assemblies = new Assembly[]
-    {
-        Assembly.GetExecutingAssembly(),
-        typeof(GetAllOccupantsQueryHandler).Assembly
-    };
+{
+    Assembly.GetExecutingAssembly(),
+    typeof(GetAllOccupantsQueryHandler).Assembly
+};
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(assemblies));
+
+builder.Services.AddMultiTenancy(options =>
+{
+    options.HeaderName  = "X-Tenant";
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -32,6 +37,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseMultiTenancy();
 
 app.UseAuthorization();
 
