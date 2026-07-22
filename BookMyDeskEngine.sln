@@ -30,21 +30,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Admission.Infra", "src\Serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookMyDesk.BuildingBlocks", "Shared\BookMyDesk.BuildingBlocks\BookMyDesk.BuildingBlocks.csproj", "{4CE7F905-3541-4FCB-9B73-8C77CF168163}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{71C639CC-F3A8-41C7-A881-91CF654A4030}"
-	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sprints", "sprints", "{366986D0-EDC2-4F80-A4DF-BA6CB88C21D5}"
-	ProjectSection(SolutionItems) = preProject
-		Sprint-01.md = Sprint-01.md
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "architecture", "architecture", "{51A1C038-B5F9-4714-A6CD-9373FDF8E541}"
-	ProjectSection(SolutionItems) = preProject
-		01-Introduction.md = 01-Introduction.md
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -152,8 +137,6 @@ Global
 		{E22350E3-574E-41B0-8422-11992C66B562} = {A92C7711-1C99-4DD2-A2DD-CD41579EACDF}
 		{83924A14-B21F-4569-AA37-160C28E9F0C1} = {A92C7711-1C99-4DD2-A2DD-CD41579EACDF}
 		{4CE7F905-3541-4FCB-9B73-8C77CF168163} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{366986D0-EDC2-4F80-A4DF-BA6CB88C21D5} = {71C639CC-F3A8-41C7-A881-91CF654A4030}
-		{51A1C038-B5F9-4714-A6CD-9373FDF8E541} = {71C639CC-F3A8-41C7-A881-91CF654A4030}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B7F4AC1B-EC6B-4B00-A191-4528B08541E2}
